@@ -110,8 +110,8 @@ int main(){
             scanf("%s",&saveBill);
             if(saveBill == 'y'){
                 fp=fopen("project.txt","ab+");
-                fwrite(&ord,sizeof(struct orders),1,fp);
-                if(fwrite != 0){
+                int lx=fwrite(&ord,sizeof(struct orders),1,fp);
+                if(lx != 0){
                     printf("\nSuccessfully saved");
                 }
                 else{
